@@ -1,0 +1,26 @@
+{
+  "name": "Data_provisioning_Server",
+  "version": "1.0.0",
+  "main": "MSP_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ChainLab",
+  "license": "ISC",
+  "dependencies": {
+    "@mui/material": "^5.0.1",
+    "agentkeepalive": "^4.1.0",
+    "async": "^3.1.0",
+    "bootstrap": "^5.1.0",
+    "convert-array-to-csv": "^1.0.9",
+    "dotenv": "^10.0.0",
+    "http": "0.0.0",
+    "node-fetch": "^2.6.0",
+    "react-bootstrap": "^2.0.0-beta.6",
+    "stdio": "^0.2.7"
+  },
+  "description": "",
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}

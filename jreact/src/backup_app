@@ -1,0 +1,58 @@
+import React, { Component } from 'react'
+import './App.css'
+import axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css'
+//import Button from 'react-bootstrap/Button';
+//import { Button } from 'react-bootstrap';
+//import PostForm from "./PostForm";
+var QRCode = require('qrcode.react');
+
+class App extends Component {
+    constructor (probs) {
+        super(probs)
+        this.state = {
+            invitation_url: '',
+            invitation_url2:'',
+        }
+
+        this.handleClick = this.handleClick.bind(this)
+        this.handleClick2 = this.handleClick2.bind(this)
+    }
+
+    handleClick () {
+        console.log('Success!')
+        axios.get('http://localhost:8000/getServiceLink').then(response => {
+        console.log(response);
+        console.log(response.data);
+         this.setState({invitation_url: "http://192.168.2.102:8000/getInvitation"})});   
+    }
+
+    handleClick2 () {
+      console.log('Success!')
+      axios.get('http://localhost:9229/getServiceLink').then(response => {
+      console.log(response);
+      console.log(response.data);
+       this.setState({invitation_url2: "http://192.168.2.102:9229/getInvitation"})});
+    }
+
+  render () {
+    return (
+            <div className="App">
+              <header className="App-header">
+              <h1> Routenplaner+</h1>
+              <div>
+                <button  type="button" className='button' onClick={this.handleClick}>Jetzt Zug buchen!</button>
+                    <a href="{this.state.invitation_url}">{this.state.invitation_url}</a>
+                    <QRCode type="QR-Code" className="QR-Code" value={this.state.invitation_url}/>
+              </div>
+              <div>
+                <button  type="button" className='button' onClick={this.handleClick2}>Jetzt Zug buchen!</button>
+                    <a href="{this.state.invitation_url}">{this.state.invitation_url2}</a>
+                    <QRCode type="QR-Code" className="QR-Code" excavate={true} value={this.state.invitation_url2}/>
+              </div>
+              </header>
+            </div>
+    )
+  }
+}
+export default (App)

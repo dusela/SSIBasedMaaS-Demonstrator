@@ -1,0 +1,56 @@
+import React, { Component } from 'react'
+import './App.css'
+import axios from 'axios'
+//import PostForm from "./PostForm";
+var QRCode = require('qrcode.react');
+
+class App extends Component {
+    constructor (probs) {
+        super(probs)
+        this.state = {
+            serviceUrl: ''
+        }
+
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick () {
+        console.log('Success!')
+        var port = "8000";
+        axios.post("http://localhost:" + port + "/getServiceLink").then(response => this.setState({"serviceUrl": response.data.serviceUrl}))
+
+    }
+
+  render () {
+    return (
+            <div>
+                <div path="/" className='button__container'>
+                    <h2> Hamburg nach Köln:</h2>
+                      <button  type="button" className='button' onClick={this.handleClick}>Jetzt Zug buchen!</button>
+                      <p path="/ticket1">{this.state.serviceUrl}</p>
+                      <QRCode path="/ticket1" value={this.state.serviceUrl}/>
+                </div>
+            </div>
+    )
+  }
+}
+export default (App)
+
+
+            <div>
+                <nav></nav>
+                <div className='button__container'>
+                    <h2> Hamburg nach Köln (Zug):</h2>
+                      <Button  type="button" className='button' onClick={this.handleClick}>Jetzt Zug buchen!</Button>
+                      <a href="{this.state.invitation_url}">{this.state.invitation_url}</a>
+                      <QRCode value={this.state.invitation_url}/>
+                </div>
+                <div className='button__container'>
+                    <h2> Köln nach Bonn (Bus):</h2>
+                      <button  type="button" className='button' onClick={this.handleClick2}>Jetzt Zug buchen!</button>
+                      <a href="{this.state.invitation_url}">{this.state.invitation_url2}</a>
+                      <QRCode value={this.state.invitation_url2}/>
+                </div>
+
+                
+            </div>

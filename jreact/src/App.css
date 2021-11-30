@@ -1,0 +1,114 @@
+.App {
+  margin-top: 20px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.body{
+  text-align: center;
+  background: #222;
+  margin: 20px;
+}
+
+.button {
+  padding: .4em .8em;
+  background: #5a9900 linear-gradient(#8db243, #5a9900);
+  border: black;
+  color: white;
+  text-shadow: 0 -.05em .05em #333;
+  box-shadow: 0 .2em .4em gray;
+  border: thin solid green;
+  font-size: 16px;
+  height: 60px;
+  width: 300px;
+  display: block;
+  margin-top: 50px;
+  margin-left: 5cm;
+}
+
+.QR-Code {
+  padding: 0.5cm;
+  height: 40px;
+  width: 40px;
+  margin-left: 7.2cm;
+}
+
+.p {
+  border-bottom: 1px solid #000;
+  margin-left: 0cm;
+}
+
+.column {
+  float: left;
+  width: 40%;
+  margin-top: 0.5cm;
+  background-color: rgb(243, 239, 239);
+  border-style:groove;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lufthansaIMG {
+  margin-left: 7cm;
+  width: 20%; 
+  height: 17%;
+}
+
+.lufthansaIMG2 {
+  margin-left: 7.7cm;
+  width: 13%;
+  height: 10%;
+}
+
+.DBLogoIMG{
+  margin-left: 7cm;
+  width: 20%;
+  height: 17%;
+}
+
+.DBLogoIMG2{
+  margin-left: 7.7cm;
+  width: 13%;
+  height: 10%;
+}
+.pa {
+  margin-left: 3.8cm;
+}
+
+.Abstand {
+  margin-top: 1cm;
+}
+
+.a {
+  word-break: break-all;
+}
+
+.erklaerung {
+  width: 60%;
+  text-align:justify;
+  line-height: 0.75cm;
+}
+
+.MasterCard {
+  margin-left: 3.2cm;
+  width: 5%; 
+  height: 4%;
+}
+
+.schaffner {
+  width: 12%; 
+  height: 8%;
+}
+
+.image2 {
+  margin-left: 1.5cm;
+}
+
+.image3 {
+  margin-left: 2.9cm;
+}

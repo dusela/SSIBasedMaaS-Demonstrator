@@ -1,0 +1,13 @@
+<div>
+                    <h2>Create Schema:</h2>
+                    <PostForm className='schema'/>
+                </div>
+
+
+                <a href="{this.state.invitation_url}">{this.state.invitation_url}</a>
+
+                    handleClick () {
+        console.log('Success!')
+        axios.post('http://localhost:7080/connections/create-invitation').then(response => this.setState({invitation_url: response.data.invitation_url}))
+
+    }
