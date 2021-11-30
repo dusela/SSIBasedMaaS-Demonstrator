@@ -3,7 +3,7 @@
 ## Deployment (work in progress; will be improved)
 
 ### Prepare the backend
-- Clone with submodules: ```git clone https://github.com/JSedlmeir92/SSI-Mobility.git --recurse-submodules```
+- Clone with submodules: ```git clone https://github.com/dusela/SSIMobility-JLautenschlager.git --recurse-submodules```
 - Make sure all ports used in docker-compose.yml are open
 - Replace the information in .env with the correct private ip_address and path to the repository (go into the repository and check the result of ```pwd```
 - For the time being: Insert the correct ip_address twice in App.js
